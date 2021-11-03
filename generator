@@ -1,0 +1,16 @@
+import pyautogui as auto
+import time
+import random
+import math
+
+time.sleep(5)
+times = 0
+while times < 1000:
+    theta = random.random() * 2 * math.pi
+    r = random.random()
+    x = r * math.cos(theta)
+    y = r * math.sin(theta)
+    auto.write(f'({x}, {y})')
+    auto.press('enter')
+    time.sleep(0.25)
+    times += 1
